@@ -1,4 +1,11 @@
 repos:
-    -   repo: git@github.com:SMARTeacher/OPA-policies-library.git
-        hooks:
-        -   id: test
+  - repo: https://github.com/norwoodj/helm-docs
+    rev: v0.8.0
+    hooks:
+      - id: helm-docs
+  - repo: git@github.com:Yelp/detect-secrets
+    rev: v0.14.3
+    hooks:
+    -   id: detect-secrets
+        args: ['--baseline', '.secrets.baseline']
+        exclude: .*/tests/.*
