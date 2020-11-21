@@ -1,0 +1,4 @@
+repos:
+    -   repo: git@github.com:SMARTeacher/OPA-policies-library.git
+        hooks:
+        -   id: test
